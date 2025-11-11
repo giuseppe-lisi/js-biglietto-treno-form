@@ -13,9 +13,13 @@
 // alert(`Costo biglietto = ${ticketPrice}`);
 
 let submitButton = document.getElementById("submit");
+let finalPrice = document.getElementById("price");
+
 
 submitButton.addEventListener("click", (event) => {
 
     event.preventDefault();
 
+    finalPrice.innerText += "Contenuto";
 });
+
