@@ -7,16 +7,15 @@ submitButton.addEventListener("click", (event) => {
 
     let ageEl = document.getElementById("age").value;
     let kmEl = document.getElementById("km").value;
-    console.log(ageEl, kmEl);
-    
+    let price = kmEl * 0.21;
 
-    if (age < 18) {
-    ticketPrice = ticketPrice * 0.80;
+    if (ageEl < 18) {
+        price = price * 0.80;
     }
-    if (age >= 65) {
-        ticketPrice = ticketPrice * 0.60;
+    if (ageEl >= 65) {
+        price = price * 0.60;
     }
 
-    finalPrice.innerText = ticketPrice;
+    finalPrice.innerText = price.toFixed(2);
 });
 
