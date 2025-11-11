@@ -6,8 +6,8 @@ submitButton.addEventListener("click", (event) => {
     event.preventDefault();
 
     let ageEl = document.getElementById("age").value;
-    let kmEl = document.getElementById("km").value;
-    let price = kmEl * 0.21;
+    let kmEl = parseInt(document.getElementById("km").value);
+    let price = kmEl * 0.21;    
 
     if (ageEl < 18) {
         price = price * 0.80;
@@ -16,6 +16,6 @@ submitButton.addEventListener("click", (event) => {
         price = price * 0.60;
     }
 
-    finalPrice.innerText = price.toFixed(2);
+    finalPrice.innerHTML = price.toFixed(2);
 });
 
