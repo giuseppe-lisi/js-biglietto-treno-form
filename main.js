@@ -9,17 +9,19 @@ form.addEventListener("submit", (event) => {
     let kmEl = parseInt(document.getElementById("km").value);
     
     let price = kmEl * 0.21;
-    let finalPrice = document.getElementById("price");
     let passenger = document.getElementById("passenger");
+    let offer = document.getElementById("offer");
+    let finalPrice = document.getElementById("price");
 
-    if (ageEl < 18) {
+    if (ageEl === "Minorenne") {
         price = price * 0.80;
     }
-    if (ageEl >= 65) {
+    if (ageEl === "Over 65") {
         price = price * 0.60;
     }
 
     passenger.innerText = nameEl;
+    offer.innerText = ageEl
     finalPrice.innerHTML = `€ ${price.toFixed(2)}`;
 });
 

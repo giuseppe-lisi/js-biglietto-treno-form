@@ -21,28 +21,32 @@
     </header>
 
     <div class="container shadow-sm">
-            <form class="row row-cols-3 my-5 border rounded-3 p-5 justify-content-center">
-                <div class="col-12 mb-4 text-center">
-                    <h2>Inserisci i tuoi dati</h2>
-                </div>
-                <div class="col-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="col-3">
-                    <label for="km" class="form-label">Km Viaggio</label>
-                    <input type="number" min="1" class="form-control" id="km" required>
-                </div>
-                <div class="col-3">
-                    <label for="age" class="form-label">Eta</label>
-                    <input type="number" min="1" class="form-control" id="age" required>
-                </div>
-                <div class="col-12 text-center mt-3">
-                    <button type="submit" class="btn btn-danger me-3" id="submit">Calcola prezzo</button>
-                    <button type="reset" class="btn btn-danger">Reset</button>
-                </div>
-            </form>
-        </div>
+        <form class="row row-cols-3 my-5 border rounded-3 p-5 justify-content-center">
+            <div class="col-12 mb-4 text-center">
+                <h2>Inserisci i tuoi dati</h2>
+            </div>
+            <div class="col-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="col-3">
+                <label for="km" class="form-label">Km Viaggio</label>
+                <input type="number" min="1" class="form-control" id="km" required>
+            </div>
+            <div class="col-3 d-flex flex-column justify-content-between">
+                <label for="age">Range Sconto</label>
+                <select class="form-select" id="age">
+                    <option selected>Adulto</option>
+                    <option>Minorenne</option>
+                    <option>Over 65</option>
+                </select>
+            </div>
+            <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn btn-danger me-3" id="submit">Calcola prezzo</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+        </form>
+    </div>
     </div>
 
     <div class="container">
